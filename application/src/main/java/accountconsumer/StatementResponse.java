@@ -1,7 +1,5 @@
 package accountconsumer;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.List;
 
 public class StatementResponse {
@@ -14,16 +12,19 @@ public class StatementResponse {
         this.accountId = accountId;
     }
 
-    static class Statement {
+    public List<Statement> getStatements() {
+        return statements;
+    }
 
-        private LocalDateTime operationTimestamp;
-        private BigDecimal amount;
-        private String transactionType;
+    public void setStatements(List<Statement> statements) {
+        this.statements = statements;
+    }
 
-        public Statement(LocalDateTime operationTimestamp, BigDecimal amount, String transactionType) {
-            this.operationTimestamp = operationTimestamp;
-            this.amount = amount;
-            this.transactionType = transactionType;
-        }
+    public String getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
     }
 }

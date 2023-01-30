@@ -9,13 +9,13 @@ import static java.util.stream.Collectors.toList;
 public class StatementResponseMapper {
 
     public StatementResponse toStatementResponse(String accountId, List<AccountTransaction> accountTransactions) {
-        List<StatementResponse.Statement> statements =
+        List<Statement> statements =
                 accountTransactions.stream().map(this::toStatement).collect(toList());
         return new StatementResponse(statements, accountId);
     }
 
-    private StatementResponse.Statement toStatement(AccountTransaction accountTransaction) {
-        return new StatementResponse.Statement(accountTransaction.getOperationTimestamp(),
+    private Statement toStatement(AccountTransaction accountTransaction) {
+        return new Statement(accountTransaction.getOperationTimestamp(),
                 accountTransaction.getAmount(),
                 accountTransaction.getTransactionType().name());
     }
