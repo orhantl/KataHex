@@ -1,5 +1,6 @@
 package api;
 
+import annotation.DomainService;
 import core.Account;
 import core.AccountTransaction;
 import spi.AccountRepository;
@@ -8,6 +9,7 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
+@DomainService
 public class DomainAccountService implements AccountService {
 
     private final AccountRepository accountRepository;
