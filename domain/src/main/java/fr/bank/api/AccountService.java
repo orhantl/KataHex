@@ -1,7 +1,7 @@
-package api;
+package fr.bank.api;
 
-import core.Account;
-import core.AccountTransaction;
+import fr.bank.core.Account;
+import fr.bank.core.AccountTransaction;
 
 import java.math.BigDecimal;
 import java.util.List;

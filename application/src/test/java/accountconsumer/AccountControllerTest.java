@@ -1,7 +1,7 @@
 package accountconsumer;
 
-import api.AccountService;
-import core.AccountTransaction;
+import fr.bank.api.AccountService;
+import fr.bank.core.AccountTransaction;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +15,8 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static core.TransactionType.DEPOSIT;
-import static core.TransactionType.WITHDRAWAL;
+import static fr.bank.core.TransactionType.DEPOSIT;
+import static fr.bank.core.TransactionType.WITHDRAWAL;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;

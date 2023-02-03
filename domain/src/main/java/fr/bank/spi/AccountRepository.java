@@ -1,6 +1,6 @@
-package spi;
+package fr.bank.spi;
 
-import core.Account;
+import fr.bank.core.Account;
 
 import java.util.Optional;
 

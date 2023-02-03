@@ -1,6 +1,6 @@
 package accountconsumer;
 
-import core.AccountTransaction;
+import fr.bank.core.AccountTransaction;
 
 import java.util.List;
 

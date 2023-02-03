@@ -1,9 +1,9 @@
-package api;
+package fr.bank.api;
 
-import annotation.DomainService;
-import core.Account;
-import core.AccountTransaction;
-import spi.AccountRepository;
+import fr.bank.annotation.DomainService;
+import fr.bank.core.Account;
+import fr.bank.core.AccountTransaction;
+import fr.bank.spi.AccountRepository;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -22,7 +22,7 @@ public class DomainAccountService implements AccountService {
     public Account findById(String bankAccountId) {
         Optional<Account> account = accountRepository.findById(bankAccountId);
         if (account.isEmpty()) {
-            throw new IllegalArgumentException("The given bank account id does not exist");
+            throw new BankAccountNotFoundException(bankAccountId);
         }
         return account.get();
     }

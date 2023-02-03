@@ -1,10 +1,7 @@
-package core;
+package fr.bank.core;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-
-import static core.TransactionType.DEPOSIT;
-import static core.TransactionType.WITHDRAWAL;
 
 public class AccountTransaction {
     private String id;
@@ -21,12 +18,12 @@ public class AccountTransaction {
         this.transactionType = transactionType;
     }
 
-    public static AccountTransaction createWithdrawalTransaction(String bandAccountId, BigDecimal amount) {
-        return new AccountTransaction(bandAccountId, LocalDateTime.now(), amount, WITHDRAWAL);
+    public static AccountTransaction createWithdrawalTransaction(String bandAccountId, LocalDateTime timestamp, BigDecimal amount) {
+        return new AccountTransaction(bandAccountId, timestamp, amount, TransactionType.WITHDRAWAL);
     }
 
-    public static AccountTransaction createDepositTransaction(String bankAccountId, BigDecimal amount) {
-        return new AccountTransaction(bankAccountId, LocalDateTime.now(), amount, DEPOSIT);
+    public static AccountTransaction createDepositTransaction(String bankAccountId, LocalDateTime timestamp, BigDecimal amount) {
+        return new AccountTransaction(bankAccountId, timestamp, amount, TransactionType.DEPOSIT);
     }
 
     public String getBankAccountId() {

@@ -1,11 +1,12 @@
-package core;
+package fr.bank.core;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import static core.AccountTransaction.createDepositTransaction;
-import static core.AccountTransaction.createWithdrawalTransaction;
+import static fr.bank.core.AccountTransaction.createDepositTransaction;
+import static fr.bank.core.AccountTransaction.createWithdrawalTransaction;
 
 public class Account {
     private final String id;
@@ -24,16 +25,16 @@ public class Account {
 
     public void withdraw(BigDecimal amount) {
         if (balance.compareTo(amount) < 0) {
-            throw new IllegalArgumentException("Amount is superior to available balance");
+            throw new ExceedingWithdrawalException(amount.toPlainString());
         }
         balance = balance.subtract(amount);
-        AccountTransaction withdrawalTransaction = createWithdrawalTransaction(this.id, amount);
+        AccountTransaction withdrawalTransaction = createWithdrawalTransaction(this.id, LocalDateTime.now(), amount);
         statements.add(withdrawalTransaction);
     }
 
     public void deposit(BigDecimal amount) {
         balance = balance.add(amount);
-        AccountTransaction depositTransaction = createDepositTransaction(this.id, amount);
+        AccountTransaction depositTransaction = createDepositTransaction(this.id, LocalDateTime.now(), amount);
         statements.add(depositTransaction);
     }
 

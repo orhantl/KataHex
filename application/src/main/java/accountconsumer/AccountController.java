@@ -1,7 +1,7 @@
 package accountconsumer;
 
-import api.AccountService;
-import core.AccountTransaction;
+import fr.bank.api.AccountService;
+import fr.bank.core.AccountTransaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

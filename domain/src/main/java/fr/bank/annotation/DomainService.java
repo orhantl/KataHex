@@ -1,4 +1,4 @@
-package annotation;
+package fr.bank.annotation;
 
 import java.lang.annotation.*;
 

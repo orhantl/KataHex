@@ -1,10 +1,10 @@
-package api;
+package fr.bank.api;
 
-import core.Account;
-import core.TransactionType;
+import fr.bank.core.Account;
+import fr.bank.core.TransactionType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import spi.AccountRepository;
+import fr.bank.spi.AccountRepository;
 
 import java.math.BigDecimal;
 import java.util.Optional;
