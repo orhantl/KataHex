@@ -1,4 +1,4 @@
-package accountconsumer;
+package fr.bank.accountconsumer;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

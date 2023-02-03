@@ -1,4 +1,4 @@
-package repository;
+package fr.bank.repository;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

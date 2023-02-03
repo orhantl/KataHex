@@ -1,4 +1,4 @@
-package accountconsumer;
+package fr.bank.accountconsumer;
 
 import fr.bank.api.AccountService;
 import fr.bank.core.AccountTransaction;

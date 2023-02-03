@@ -1,4 +1,4 @@
-package accountconsumer;
+package fr.bank.accountconsumer;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

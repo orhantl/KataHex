@@ -1,4 +1,4 @@
-package accountconsumer;
+package fr.bank.accountconsumer;
 
 import fr.bank.core.AccountTransaction;
 

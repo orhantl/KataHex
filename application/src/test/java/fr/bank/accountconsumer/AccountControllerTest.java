@@ -1,5 +1,6 @@
-package accountconsumer;
+package fr.bank.accountconsumer;
 
+import fr.bank.accountconsumer.AccountController;
 import fr.bank.api.AccountService;
 import fr.bank.core.AccountTransaction;
 import org.junit.jupiter.api.BeforeEach;
